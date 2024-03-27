@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 
 import { useState } from "react";
-import {addUser} from '../service/addUserApi'
+import {addUser} from '../service/api.js'
 
 const Container = styled(FormGroup)`
   width: 50%;
@@ -29,8 +29,7 @@ const initialValue = {
 const AddUsers = () => {
   const [user, setUser ] = useState(initialValue);
   const onChangeValue = (value) => {
-    console.log(value.target.name, value.target.value);
-    setUser({...initialValue,[value.target.name]:value.target.value})
+    setUser({...user,[value.target.name]:value.target.value})
   
   };
   const userDetails = async()=>{
