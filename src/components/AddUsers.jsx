@@ -7,7 +7,7 @@ import {
   FormControl,
   Typography,
 } from "@mui/material";
-
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import {addUser} from '../service/api.js'
 
@@ -28,12 +28,14 @@ const initialValue = {
 
 const AddUsers = () => {
   const [user, setUser ] = useState(initialValue);
+  const navigate = useNavigate();
   const onChangeValue = (value) => {
     setUser({...user,[value.target.name]:value.target.value})
   
   };
   const userDetails = async()=>{
     await addUser(user);
+    navigate('/all-users');
   }
   return (
     <Container>
