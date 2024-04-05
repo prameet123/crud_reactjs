@@ -39,6 +39,21 @@ const AddUsers = () => {
       return false;
       
     }
+    if (!user.lastName || user.lastName.length === 0){
+      setError({ lastName: "lastName name blank" });
+      return false;
+      
+    }
+    if (!user.mobileNumber || user.mobileNumber.length === 0){
+      setError({ mobileNumber: "Mobile Number blank" });
+      return false;
+      
+    }
+    if (!user.email || user.email.length === 0){
+      setError({ email: "Mobile Number blank" });
+      return false;
+      
+    }
       
     await addUser(user);
     
@@ -62,15 +77,30 @@ const AddUsers = () => {
       </FormControl>
       <FormControl>
         <InputLabel>Last Name</InputLabel>
-        <Input onChange={(e) => onChangeValue(e)} name="lastName" />
+        <Input onChange={(e) => onChangeValue(e)} name="lastName" error={!!error.lastName}/>
+        {error.lastName && (
+          <Typography variant="caption" color="error">
+            {error.lastName}
+          </Typography>
+        )}
       </FormControl>
       <FormControl>
         <InputLabel>Mobile Number</InputLabel>
-        <Input onChange={(e) => onChangeValue(e)} name="mobileNumber" />
+        <Input onChange={(e) => onChangeValue(e)} name="mobileNumber" error={!!error.mobileNumber}/>
+        {error.mobileNumber && (
+          <Typography variant="caption" color="error">
+            {error.mobileNumber}
+          </Typography>
+        )}
       </FormControl>
       <FormControl>
         <InputLabel>Email ID</InputLabel>
-        <Input onChange={(e) => onChangeValue(e)} name="email" />
+        <Input onChange={(e) => onChangeValue(e)} name="email" error={!!error.email}/>
+        {error.email && (
+          <Typography variant="caption" color="error">
+            {error.email}
+          </Typography>
+        )}
       </FormControl>
       <FormControl>
         <Button onClick={() => userDetails()} variant="contained">
