@@ -22,20 +22,6 @@
       "email": "williamwong@example.com"
     },
     {
-      "id": "2fee",
-      "firstName": "",
-      "lastName": "",
-      "mobileNumber": "",
-      "email": ""
-    },
-    {
-      "id": "bef7",
-      "firstName": "d",
-      "lastName": "d",
-      "mobileNumber": "8866546566",
-      "email": "d"
-    },
-    {
       "id": "5734",
       "firstName": "gh",
       "lastName": "hhg",
@@ -62,13 +48,6 @@
       "lastName": "f",
       "mobileNumber": "fd",
       "email": "df"
-    },
-    {
-      "id": "a966",
-      "firstName": "d",
-      "lastName": "d",
-      "mobileNumber": "d",
-      "email": "d"
     }
   ]
 }
