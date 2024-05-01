@@ -44,11 +44,11 @@ const AddUsers = () => {
 	};
 	const userDetails = async () => {
 		if (!user.firstName || user.firstName.length === 0) {
-			setError({ firstName: 'first name blank' });
+			setError({ firstName: 'First name blank' });
 			return false;
 		}
 		if (!user.lastName || user.lastName.length === 0) {
-			setError({ lastName: 'lastName name blank' });
+			setError({ lastName: 'Last name blank' });
 			return false;
 		}
 		if (!user.mobileNumber || user.mobileNumber.length === 0) {

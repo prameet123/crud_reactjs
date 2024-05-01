@@ -14,7 +14,7 @@ function App() {
         <Route path="/add-user" element={<AddUsers />} />
         <Route path="/all-users" element={<AllUsers />} />
         <Route path="/edit-user/:id" element={<EditUser />} />
-        <Route path="/" element={<DataTable />} />
+        <Route path="/" element={<AllUsers />} />
       </Routes>
     </Router>
   );
